@@ -9,10 +9,10 @@
 </head>
 <body>
     <nav>
-        <button onclick='four()'><p>IV</p></button>
-        <button onclick='three()'><p>III</p></button>
-        <button onclick='two()'><p>II</p></button>
-        <button onclick='one()'><p class='active'>I</p></button>
+        <button onclick='four()'><p>contact</p></button>
+        <button onclick='three()'><p>curriculum vitæ</p></button>
+        <button onclick='two()'><p>portfolio</p></button>
+        <button onclick='one()'><p class='active'>about</p></button>
     </nav>
     <section class='content'>
         <div class="content__main">
