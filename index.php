@@ -18,22 +18,22 @@
         <div class="mainBlock__wrapper">
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
-
+                    <h1 class='mainBlock__wrapper__slide__content__title'>about me</h1>
                 </div>
             </div>
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
-                    
+                    <h1 class='mainBlock__wrapper__slide__content__title'>portfolio</h1>
                 </div>
             </div>
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
-                    
+                    <h1 class='mainBlock__wrapper__slide__content__title'>curriculum vitæ</h1>
                 </div>
             </div>
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
-                
+                    <h1 class='mainBlock__wrapper__slide__content__title'>contact me</h1>
                 </div>
             </div>
         </div>
