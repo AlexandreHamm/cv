@@ -54,6 +54,12 @@
             </div>
         </div>
     </div>
+    <div class="alertModal">
+        <p class="alertModal__text">
+            Clic droit désactivé par défaut. <br> Pour ouvrir la console, utilisez les raccourcis <br>clavier (ex: f12) !
+        </p>
+        <button class='alertModal__btn' onclick="hideAlert()">Ok</button>
+    </div>
     <div class="parkModal">
         <img src="./src/gif/magicword.gif" alt="">
         <button class='parkModal__btn' onclick='magicWord()'>Mot magique</button>

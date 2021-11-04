@@ -61,15 +61,22 @@ function four(){
 }
 
 // JURASSIC PARK EASTER EGG
-let disable = true;
+let disable = true,
+   alertModal = false;
 document.getElementById('park').volume = 0.2;
 
 
    // disable right click
 window.oncontextmenu = function(){
    if(disable == true){
+      document.querySelector('.alertModal').style.transform = 'translate(-50%) scale(1)';
+      alertModal = true;
       return false;
    }
+}
+function hideAlert(){
+   document.querySelector('.alertModal').style.transform = 'translate(-50%) scale(0)';
+   alertModal = false;
 }
  
 document.onkeydown = function (e) {
@@ -79,6 +86,9 @@ document.onkeydown = function (e) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
          document.getElementById('park').play();
+         if(alertModal == true){
+            hideAlert();
+         }
          return false;
       }
    }
@@ -88,6 +98,9 @@ document.onkeydown = function (e) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
          document.getElementById('park').play();
+         if(alertModal == true){
+            hideAlert();
+         }
          return false;
       }
    }
@@ -97,6 +110,9 @@ document.onkeydown = function (e) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
          document.getElementById('park').play();
+         if(alertModal == true){
+            hideAlert();
+         }
          return false;
       }
    }
@@ -106,6 +122,9 @@ document.onkeydown = function (e) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
          document.getElementById('park').play();
+         if(alertModal == true){
+            hideAlert();
+         }
          return false;
       }
    }
