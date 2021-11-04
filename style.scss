@@ -1,0 +1,219 @@
+    // GENERAL + RESET
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+    // NAVBAR
+
+.mainNav{
+    position: fixed;
+    z-index: 99;
+
+    width: 100vh;
+    height: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: rotate(90deg) translateY(-100vw);
+    transform-origin: top left;
+
+    &__btn{
+        width: 100vh;
+        
+        outline: none;
+        border: none;
+
+        background-color: #000;
+        color: #FFF;
+
+        cursor: pointer;
+
+        transform: rotate(180deg) translateY(0);
+        transition: .3s ease-in-out;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:nth-child(4){
+            transform: rotate(180deg) translateY(calc(-100vw + (124px)));
+        }
+
+        &__name{
+            position: relative;
+            z-index: 2;
+
+            cursor: pointer;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+
+            margin: 1px;
+            
+            font-size: 1.9em;
+            color: #181818;
+            text-transform: uppercase;
+            
+            background-image: linear-gradient(to top, #242424 0%, #3A3A3A 100%);
+            box-shadow: inset 0 20px 4px -21px rgba(#fff,.4), 0 19px 13px 0 rgba(0,0,0,.3);
+            filter: drop-shadow(0 1px 1px  rgba(#fff, 0.15)) url(#inset-shadow);
+            transition: .2s;
+
+            &:before{
+                content: "";
+                display: block;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                width: .8em;
+                height: .8em;
+               
+                border-radius: 50%;
+                
+                opacity: 0;
+                filter: blur(15px);
+                transform: translate(-50%, -50%);
+                transition: .1s;
+            }
+
+            &:after{
+                content: "";
+                display: block;
+
+                position: absolute;
+                z-index: -1;
+
+                width: 1px;
+                height: 70px;
+                
+                border-radius: 50%;
+                
+                opacity: 0;
+                filter: blur(0px);
+                box-shadow: -75px 0 0px 0px rgba(#b3e1ff, 0.3), 74px 0 0px 0px rgba(#b3e1ff, 0.35);
+                transition: .2s;
+            }
+
+            &.active{
+                background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
+                color: rgba(255, 255, 255, .5);
+                z-index: 0;
+
+                &:before{
+                    opacity: .3;
+                }
+                &:after{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+    // CONTENT
+
+.mainBlock{
+    width: 100vh;
+    height: 100vw;
+
+    overflow: hidden;
+
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+
+    &__wrapper{
+        width: 400vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: row;
+
+        transform: rotate(90deg) translateY(-100vh);
+        transform-origin: top left;
+
+        &__slide{
+            width: 25%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+
+            &__content{
+                width: 80vw;
+                height: 100vh;
+
+                box-shadow: inset 0 0 10em 10em #000;
+            }
+        }
+    }
+}
+
+    // BACKGROUND
+
+.bgBlock{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+
+    max-height: 288px;
+
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+
+    &__counter{
+        transition: .3s ease-in-out;
+
+        &__slide{
+            color: #FFF;
+            opacity: .1;
+            text-align: center;
+            font-size: 250px;
+        }
+    }
+}
+
+// JURASSIC PARK EASTER EGG MODAL
+
+.parkModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFF;
+
+    &__btn{
+        cursor: pointer;
+        padding: 5px 10px;
+        border: none;
+        box-shadow: 2px 2px 5px #000;
+    }
+}

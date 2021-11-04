@@ -8,60 +8,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <button onclick='four()'><p>contact</p></button>
-        <button onclick='three()'><p>curriculum vitæ</p></button>
-        <button onclick='two()'><p>portfolio</p></button>
-        <button onclick='one()'><p class='active'>about</p></button>
+    <nav class='mainNav'>
+        <button class='mainNav__btn' onclick='four()'><p class='mainNav__btn__name'>contact</p></button>
+        <button class='mainNav__btn' onclick='three()'><p class='mainNav__btn__name'>curriculum vitæ</p></button>
+        <button class='mainNav__btn' onclick='two()'><p class='mainNav__btn__name'>portfolio</p></button>
+        <button class='mainNav__btn' onclick='one()'><p class='mainNav__btn__name active'>about</p></button>
     </nav>
-    <section class='content'>
-        <div class="content__main">
-            <div class="main__sliderWrapper--slide">
-                <div class="slide--content">
+    <section class='mainBlock'>
+        <div class="mainBlock__wrapper">
+            <div class="mainBlock__wrapper__slide">
+                <div class="mainBlock__wrapper__slide__content">
 
                 </div>
             </div>
-            <div class="main__sliderWrapper--slide">
-                <div class="slide--content">
+            <div class="mainBlock__wrapper__slide">
+                <div class="mainBlock__wrapper__slide__content">
                     
                 </div>
             </div>
-            <div class="main__sliderWrapper--slide">
-                <div class="slide--content">
+            <div class="mainBlock__wrapper__slide">
+                <div class="mainBlock__wrapper__slide__content">
                     
                 </div>
             </div>
-            <div class="main__sliderWrapper--slide">
-                <div class="slide--content">
-                    
+            <div class="mainBlock__wrapper__slide">
+                <div class="mainBlock__wrapper__slide__content">
+                
                 </div>
             </div>
         </div>
     </section>
-    <div class="content__bg">
-        <div class="content__bg--counter">
-            <div class="content__bg--counterSlide">
+    <div class="bgBlock">
+        <div class="bgBlock__counter">
+            <div class="bgBlock__counter__slide">
                 I
-                <div class="content__bg--shadow"></div>
             </div>
-            <div class="content__bg--counterSlide">
-                <div class="content__bg--shadow"></div>
+            <div class="bgBlock__counter__slide">
                 II
             </div>
-            <div class="content__bg--counterSlide">
-                <div class="content__bg--shadow"></div> 
+            <div class="bgBlock__counter__slide"> 
                 III
             </div>
-            <div class="content__bg--counterSlide">
-                <div class="content__bg--shadow"></div>
+            <div class="bgBlock__counter__slide">
                 IV
             </div>
         </div>
     </div>
-    <div class="magic__word">
+    <div class="parkModal">
         <img src="./src/gif/magicword.gif" alt="">
-        <button onclick='magicWord()'>Mot magique</button>
-        <audio src="./src/mp3/magicword.mp3" loop id='park'></audio>
+        <button class='parkModal__btn' onclick='magicWord()'>Mot magique</button>
+        <audio id='park' src="./src/mp3/magicword.mp3" loop></audio>
     </div>
 
     <script src="app.js"></script>
