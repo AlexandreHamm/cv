@@ -19,7 +19,7 @@
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
 
-                <img class='mainBlock__wrapper__slide__content__img' src="./src/gif/magicword.gif" alt="">
+                    <img class='mainBlock__wrapper__slide__content__img' src="./src/img/desk.jpg" alt="">
 
                     <h1 class='mainBlock__wrapper__slide__content__title'>about me</h1>
                     <div class="mainBlock__wrapper__slide__content__reveal">
@@ -30,6 +30,7 @@
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
 
+                    <img class='mainBlock__wrapper__slide__content__img' src="./src/img/laptop.jpg" alt="">
 
                     <h1 class='mainBlock__wrapper__slide__content__title'>portfolio</h1>
                     <div class="mainBlock__wrapper__slide__content__reveal">
@@ -40,6 +41,7 @@
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
 
+                    <img class='mainBlock__wrapper__slide__content__img' src="./src/img/screen.webp" alt="">
 
                     <h1 class='mainBlock__wrapper__slide__content__title'>curriculum vitæ</h1>
                     <div class="mainBlock__wrapper__slide__content__reveal">
@@ -50,6 +52,7 @@
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
 
+                    <img class='mainBlock__wrapper__slide__content__img' src="./src/img/office.webp" alt="">
 
                     <h1 class='mainBlock__wrapper__slide__content__title'>contact me</h1>
                     <div class="mainBlock__wrapper__slide__content__reveal">

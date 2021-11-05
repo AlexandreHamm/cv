@@ -7,8 +7,6 @@ window.onload = function(){
    document.querySelectorAll('.mainBlock__wrapper__slide__content__reveal').forEach(function(element){
       element.style.top = (100*Math.random()) + "%";
       element.style.left = (100*Math.random()) + "%";
-
-      console.log(element);
    });
 };
 
@@ -77,10 +75,14 @@ function four(){
 
 document.querySelectorAll('.mainBlock__wrapper__slide__content__reveal').forEach(function(element){
    element.addEventListener('mouseenter', function(){
-      document.querySelector('.mainBlock__wrapper__slide__content__img').style.opacity = '.7';
+      document.querySelectorAll('.mainBlock__wrapper__slide__content__img').forEach(function(elmnt){
+         elmnt.style.opacity = '.7';
+      });
    });
    element.addEventListener('mouseleave', function(){
-      document.querySelector('.mainBlock__wrapper__slide__content__img').style.opacity = '0';
+      document.querySelectorAll('.mainBlock__wrapper__slide__content__img').forEach(function(elmnt){
+         elmnt.style.opacity = '0';
+      });
    });
 });
 
