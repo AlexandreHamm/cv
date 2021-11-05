@@ -1,6 +1,19 @@
 let btns = document.querySelectorAll(".mainNav__btn__name");
 let pos = 1;
 
+// REVEAL INIT
+
+window.onload = function(){
+   document.querySelectorAll('.mainBlock__wrapper__slide__content__reveal').forEach(function(element){
+      element.style.top = (100*Math.random()) + "%";
+      element.style.left = (100*Math.random()) + "%";
+
+      console.log(element);
+   });
+};
+
+// NAVBAR
+
 function removeActive(){
    btns.forEach(function(btn){
       if(btn.classList.contains('active')){
@@ -60,13 +73,24 @@ function four(){
    pos = 4;
 }
 
+// HOVER SHOW CONTENT
+
+document.querySelectorAll('.mainBlock__wrapper__slide__content__reveal').forEach(function(element){
+   element.addEventListener('mouseenter', function(){
+      document.querySelector('.mainBlock__wrapper__slide__content__img').style.opacity = '.7';
+   });
+   element.addEventListener('mouseleave', function(){
+      document.querySelector('.mainBlock__wrapper__slide__content__img').style.opacity = '0';
+   });
+});
+
 // JURASSIC PARK EASTER EGG
 let disable = true,
    alertModal = false;
 document.getElementById('park').volume = 0.2;
 
 
-   // disable right click
+   // DISABLE RIGHT CLICK
 window.oncontextmenu = function(){
    if(disable == true){
       document.querySelector('.alertModal').style.transform = 'translate(-50%) scale(1)';
@@ -81,7 +105,7 @@ function hideAlert(){
  
 document.onkeydown = function (e) {
 
-   // disable F12 key
+   // DISABLE F12
    if(e.keyCode == 123) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
@@ -93,7 +117,7 @@ document.onkeydown = function (e) {
       }
    }
 
-   // disable I key
+   // DISABLE CTRL + SHIFT + I
    if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
@@ -105,7 +129,7 @@ document.onkeydown = function (e) {
       }
    }
 
-   // disable J key
+   // DISABLE CTRL + SHIFT + J
    if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
@@ -117,7 +141,7 @@ document.onkeydown = function (e) {
       }
    }
 
-   // disable U key
+   // DISABLE CTRL + U
    if(e.ctrlKey && e.keyCode == 85) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
@@ -129,6 +153,8 @@ document.onkeydown = function (e) {
       }
    }
 }
+
+// MODAL
 
 function magicWord(){
    document.querySelector('.parkModal').style.display = 'none';
