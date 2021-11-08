@@ -44,6 +44,7 @@ body {
 }
 
 .mainNav__btn {
+  position: relative;
   width: 100vh;
   margin-top: 1px;
   outline: none;
@@ -74,6 +75,24 @@ body {
 .mainNav__btn:nth-child(4) {
   -webkit-transform: rotate(180deg) translateY(calc(-100vw + (128px)));
           transform: rotate(180deg) translateY(calc(-100vw + (128px)));
+}
+
+.mainNav__btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.03) 52%, rgba(255, 255, 255, 0.16) 54%, transparent 55%);
+  background-size: 200% 100%;
+  background-position: 70% 0;
+}
+
+.mainNav__btn.shine:after {
+  -webkit-animation: shine .3s;
+          animation: shine .3s;
 }
 
 .mainNav__btn.active {
@@ -366,5 +385,35 @@ body {
   border: none;
   -webkit-box-shadow: 2px 2px 5px #000;
           box-shadow: 2px 2px 5px #000;
+}
+
+@-webkit-keyframes shine {
+  0% {
+    opacity: 0;
+    background-position: 100% 0;
+  }
+  50% {
+    opacity: .7;
+    background-position: 50% 0;
+  }
+  0% {
+    opacity: 0;
+    background-position: 0% 0;
+  }
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    background-position: 100% 0;
+  }
+  50% {
+    opacity: .7;
+    background-position: 50% 0;
+  }
+  0% {
+    opacity: 0;
+    background-position: 0% 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -26,6 +26,10 @@ function one(){
       document.querySelector('.mainNav__btn:nth-child(4)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
       removeActive();
       document.querySelector('.mainNav__btn:nth-child(4)').classList.add('active');
+      document.querySelector('.mainNav__btn:nth-child(4)').classList.add('shine');
+      setTimeout(function(){
+         document.querySelector('.mainNav__btn:nth-child(4)').classList.remove('shine');
+      }, 700);
    if(pos > 1){
       document.querySelector('.mainNav__btn:nth-child(3)').style.transform = 'rotate(180deg) translateY(0)';
       document.querySelector('.mainNav__btn:nth-child(2)').style.transform = 'rotate(180deg) translateY(0)';
@@ -40,6 +44,10 @@ function two(){
    document.querySelector('.mainNav__btn:nth-child(3)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
    removeActive();
    document.querySelector('.mainNav__btn:nth-child(3)').classList.add('active');
+   document.querySelector('.mainNav__btn:nth-child(3)').classList.add('shine');
+      setTimeout(function(){
+         document.querySelector('.mainNav__btn:nth-child(3)').classList.remove('shine');
+      }, 700);
    if(pos > 2){
       document.querySelector('.mainNav__btn:nth-child(2)').style.transform = 'rotate(180deg) translateY(0)';
       document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(0)';
@@ -54,6 +62,10 @@ function three(){
    document.querySelector('.mainNav__btn:nth-child(2)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
    removeActive();
    document.querySelector('.mainNav__btn:nth-child(2)').classList.add('active');
+   document.querySelector('.mainNav__btn:nth-child(2)').classList.add('shine');
+      setTimeout(function(){
+         document.querySelector('.mainNav__btn:nth-child(2)').classList.remove('shine');
+      }, 700);
    if(pos > 3){
       document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(0)';
    }
@@ -68,6 +80,10 @@ function four(){
    document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
    removeActive();
    document.querySelector('.mainNav__btn:nth-child(1)').classList.add('active');
+   document.querySelector('.mainNav__btn:nth-child(1)').classList.add('shine');
+      setTimeout(function(){
+         document.querySelector('.mainNav__btn:nth-child(1)').classList.remove('shine');
+      }, 700);
    pos = 4;
 }
 
