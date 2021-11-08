@@ -12,7 +12,7 @@
         <button class='mainNav__btn' onclick='four()'><p class='mainNav__btn__name'>contact</p></button>
         <button class='mainNav__btn' onclick='three()'><p class='mainNav__btn__name'>curriculum vitæ</p></button>
         <button class='mainNav__btn' onclick='two()'><p class='mainNav__btn__name'>portfolio</p></button>
-        <button class='mainNav__btn' onclick='one()'><p class='mainNav__btn__name active'>about</p></button>
+        <button class='mainNav__btn active' onclick='one()'><p class='mainNav__btn__name'>about</p></button>
     </nav>
     <section class='mainBlock'>
         <div class="mainBlock__wrapper">

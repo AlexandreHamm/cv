@@ -1,4 +1,4 @@
-let btns = document.querySelectorAll(".mainNav__btn__name");
+let btns = document.querySelectorAll(".mainNav__btn");
 let pos = 1;
 
 // REVEAL INIT
@@ -23,9 +23,9 @@ function removeActive(){
 function one(){
    document.querySelector('.mainBlock__wrapper').style.transform = 'rotate(90deg) translateY(-100vh) translateX(0)';
       document.querySelector('.bgBlock__counter').style.transform = 'translateY(0)';
-      document.querySelector('.mainNav__btn:nth-child(4)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
+      document.querySelector('.mainNav__btn:nth-child(4)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
       removeActive();
-      document.querySelector('.mainNav__btn:nth-child(4) > p').classList.add('active');
+      document.querySelector('.mainNav__btn:nth-child(4)').classList.add('active');
    if(pos > 1){
       document.querySelector('.mainNav__btn:nth-child(3)').style.transform = 'rotate(180deg) translateY(0)';
       document.querySelector('.mainNav__btn:nth-child(2)').style.transform = 'rotate(180deg) translateY(0)';
@@ -36,10 +36,10 @@ function one(){
 function two(){
    document.querySelector('.mainBlock__wrapper').style.transform = 'rotate(90deg) translateY(-100vh) translateX(-100vw)';
    document.querySelector('.bgBlock__counter').style.transform = 'translateY(-25%)';
-   document.querySelector('.mainNav__btn:nth-child(4)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
-   document.querySelector('.mainNav__btn:nth-child(3)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
+   document.querySelector('.mainNav__btn:nth-child(4)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
+   document.querySelector('.mainNav__btn:nth-child(3)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
    removeActive();
-   document.querySelector('.mainNav__btn:nth-child(3) > p').classList.add('active');
+   document.querySelector('.mainNav__btn:nth-child(3)').classList.add('active');
    if(pos > 2){
       document.querySelector('.mainNav__btn:nth-child(2)').style.transform = 'rotate(180deg) translateY(0)';
       document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(0)';
@@ -49,11 +49,11 @@ function two(){
 function three(){
    document.querySelector('.mainBlock__wrapper').style.transform = 'rotate(90deg) translateY(-100vh) translateX(-200vw)';
    document.querySelector('.bgBlock__counter').style.transform = 'translateY(-50%)';
-   document.querySelector('.mainNav__btn:nth-child(4)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
-   document.querySelector('.mainNav__btn:nth-child(3)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
-   document.querySelector('.mainNav__btn:nth-child(2)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
+   document.querySelector('.mainNav__btn:nth-child(4)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
+   document.querySelector('.mainNav__btn:nth-child(3)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
+   document.querySelector('.mainNav__btn:nth-child(2)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
    removeActive();
-   document.querySelector('.mainNav__btn:nth-child(2) > p').classList.add('active');
+   document.querySelector('.mainNav__btn:nth-child(2)').classList.add('active');
    if(pos > 3){
       document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(0)';
    }
@@ -62,12 +62,12 @@ function three(){
 function four(){
    document.querySelector('.mainBlock__wrapper').style.transform = 'rotate(90deg) translateY(-100vh) translateX(-300vw)';
    document.querySelector('.bgBlock__counter').style.transform = 'translateY(-75%)';
-   document.querySelector('.mainNav__btn:nth-child(4)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
-   document.querySelector('.mainNav__btn:nth-child(3)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
-   document.querySelector('.mainNav__btn:nth-child(2)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
-   document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (124px)))';
+   document.querySelector('.mainNav__btn:nth-child(4)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
+   document.querySelector('.mainNav__btn:nth-child(3)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
+   document.querySelector('.mainNav__btn:nth-child(2)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
+   document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(calc(-100vw + (128px)))';
    removeActive();
-   document.querySelector('.mainNav__btn:nth-child(1) > p').classList.add('active');
+   document.querySelector('.mainNav__btn:nth-child(1)').classList.add('active');
    pos = 4;
 }
 
