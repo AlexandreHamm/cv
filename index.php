@@ -1,3 +1,6 @@
+<?php
+    // include 'actions/guestbook/sendComment.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HAMM Alexandre - CV</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/src/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/src/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/src/favicon/site.webmanifest">
 </head>
 <body>
     <nav class='mainNav'>
@@ -19,7 +27,7 @@
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
 
-                    <img class='mainBlock__wrapper__slide__content__img' src="./src/img/desk.jpg" alt="">
+                    <img class='mainBlock__wrapper__slide__content__img' src="./assets/src/img/desk.jpg" alt="">
 
                     <h1 class='mainBlock__wrapper__slide__content__title'>about me</h1>
                     <div class="mainBlock__wrapper__slide__content__reveal">
@@ -30,7 +38,7 @@
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
 
-                    <img class='mainBlock__wrapper__slide__content__img' src="./src/img/laptop.jpg" alt="">
+                    <img class='mainBlock__wrapper__slide__content__img' src="./assets/src/img/laptop.jpg" alt="">
 
                     <h1 class='mainBlock__wrapper__slide__content__title'>portfolio</h1>
                     <div class="mainBlock__wrapper__slide__content__reveal">
@@ -41,7 +49,7 @@
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
 
-                    <img class='mainBlock__wrapper__slide__content__img' src="./src/img/screen.webp" alt="">
+                    <img class='mainBlock__wrapper__slide__content__img' src="./assets/src/img/screen.webp" alt="">
 
                     <h1 class='mainBlock__wrapper__slide__content__title'>curriculum vitæ</h1>
                     <div class="mainBlock__wrapper__slide__content__reveal">
@@ -51,13 +59,33 @@
             </div>
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
+                    <img class='mainBlock__wrapper__slide__content__img' src="./assets/src/img/office.webp" alt="">
 
-                    <img class='mainBlock__wrapper__slide__content__img' src="./src/img/office.webp" alt="">
+                    <form class='mainBlock__wrapper__slide__content__form' method='POST'>
+                        <div class="mainBlock__wrapper__slide__content__form__name">
+                            <input name='first_name' type="text" class="mainBlock__wrapper__slide__content__form__name__first form__input">
+                            <input name='last_name' type="text" class="mainBlock__wrapper__slide__content__form__name__last form__input">
+                        </div>
+                        <input name='mail' type="text" class="mainBlock__wrapper__slide__content__form__mail form__input">
+                        <textarea name='content' placeholder='' class='mainBlock__wrapper__slide__content__form__mailContent form__input'></textarea>
+                    </form>
+
+                    <div class="mainBlock__wrapper__slide__content__guestbook">
+                        <form class='mainBlock__wrapper__slide__content__guestbook__form' method='POST'>
+                            <input name='name' type="text" class="mainBlock__wrapper__slide__content__guestbook__form__name form__input">
+                            <textarea name="comment" class='mainBlock__wrapper__slide__content__guestbook__form__comment form__input'></textarea>
+                            <button type='submit' name='validate'>Send</button>
+                        </form>
+                        <div class="mainBlock__wrapper__slide__content__guestbook__commentSection">
+
+                        </div>
+                    </div>
+                    
 
                     <h1 class='mainBlock__wrapper__slide__content__title'>contact me</h1>
-                    <div class="mainBlock__wrapper__slide__content__reveal">
+                    <!-- <div class="mainBlock__wrapper__slide__content__reveal">
                         <svg class='mainBlock__wrapper__slide__content__reveal__hoverme' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.015 7c4.751 0 8.063 3.012 9.504 4.636-1.401 1.837-4.713 5.364-9.504 5.364-4.42 0-7.93-3.536-9.478-5.407 1.493-1.647 4.817-4.593 9.478-4.593zm0-2c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 3c-2.21 0-4 1.791-4 4s1.79 4 4 4c2.209 0 4-1.791 4-4s-1.791-4-4-4zm-.004 3.999c-.564.564-1.479.564-2.044 0s-.565-1.48 0-2.044c.564-.564 1.479-.564 2.044 0s.565 1.479 0 2.044z"/></svg>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -85,11 +113,11 @@
         <button class='alertModal__btn' onclick="hideAlert()">Ok</button>
     </div>
     <div class="parkModal">
-        <img src="./src/gif/magicword.gif" alt="">
+        <img src="./assets/src/gif/magicword.gif" alt="">
         <button class='parkModal__btn' onclick='magicWord()'>Mot magique</button>
-        <audio id='park' src="./src/mp3/magicword.mp3" loop></audio>
+        <audio id='park' src="./assets/src/mp3/magicword.mp3" loop></audio>
     </div>
 
-    <script src="app.js"></script>
+    <script src="./assets/app.js"></script>
 </body>
 </html>

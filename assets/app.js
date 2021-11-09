@@ -1,5 +1,6 @@
-let btns = document.querySelectorAll(".mainNav__btn");
-let pos = 1;
+let btns = document.querySelectorAll(".mainNav__btn"),
+   pos = 1,
+   fourth = false;
 
 // REVEAL INIT
 
@@ -36,6 +37,18 @@ function one(){
       document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(0)';
    }
    pos = 1;
+
+   if(fourth == true){
+      document.querySelectorAll('.mainBlock__wrapper__slide__content__img').forEach(function(elmnt){
+         elmnt.style.opacity = '0';
+      });
+      setTimeout(() => {
+         document.querySelectorAll('.mainBlock__wrapper__slide__content__title').forEach(function(elmnt){
+            elmnt.style.zIndex = '98';
+         });
+      }, 200);
+      fourth = false;
+   }
 }
 function two(){
    document.querySelector('.mainBlock__wrapper').style.transform = 'rotate(90deg) translateY(-100vh) translateX(-100vw)';
@@ -53,6 +66,18 @@ function two(){
       document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(0)';
    }
    pos = 2;
+
+   if(fourth == true){
+      document.querySelectorAll('.mainBlock__wrapper__slide__content__img').forEach(function(elmnt){
+         elmnt.style.opacity = '0';
+      });
+      setTimeout(() => {
+         document.querySelectorAll('.mainBlock__wrapper__slide__content__title').forEach(function(elmnt){
+            elmnt.style.zIndex = '98';
+         });
+      }, 200);
+      fourth = false;
+   }
 }
 function three(){
    document.querySelector('.mainBlock__wrapper').style.transform = 'rotate(90deg) translateY(-100vh) translateX(-200vw)';
@@ -70,6 +95,18 @@ function three(){
       document.querySelector('.mainNav__btn:nth-child(1)').style.transform = 'rotate(180deg) translateY(0)';
    }
    pos = 3;
+
+   if(fourth == true){
+      document.querySelectorAll('.mainBlock__wrapper__slide__content__img').forEach(function(elmnt){
+         elmnt.style.opacity = '0';
+      });
+      setTimeout(() => {
+         document.querySelectorAll('.mainBlock__wrapper__slide__content__title').forEach(function(elmnt){
+            elmnt.style.zIndex = '98';
+         });
+      }, 200);
+      fourth = false;
+   }
 }
 function four(){
    document.querySelector('.mainBlock__wrapper').style.transform = 'rotate(90deg) translateY(-100vh) translateX(-300vw)';
@@ -85,6 +122,18 @@ function four(){
          document.querySelector('.mainNav__btn:nth-child(1)').classList.remove('shine');
       }, 700);
    pos = 4;
+
+   if(fourth == false){
+      document.querySelectorAll('.mainBlock__wrapper__slide__content__img').forEach(function(elmnt){
+         elmnt.style.opacity = '.7';
+      });
+      setTimeout(() => {
+         document.querySelectorAll('.mainBlock__wrapper__slide__content__title').forEach(function(elmnt){
+            elmnt.style.zIndex = '-1';
+         });
+      }, 100);
+      fourth = true;
+   }
 }
 
 // HOVER SHOW CONTENT
@@ -94,21 +143,38 @@ document.querySelectorAll('.mainBlock__wrapper__slide__content__reveal').forEach
       document.querySelectorAll('.mainBlock__wrapper__slide__content__img').forEach(function(elmnt){
          elmnt.style.opacity = '.7';
       });
+      setTimeout(() => {
+         document.querySelectorAll('.mainBlock__wrapper__slide__content__title').forEach(function(elmnt){
+            elmnt.style.zIndex = '-1';
+         });
+      }, 100);
    });
    element.addEventListener('mouseleave', function(){
       document.querySelectorAll('.mainBlock__wrapper__slide__content__img').forEach(function(elmnt){
          elmnt.style.opacity = '0';
       });
+      setTimeout(() => {
+         document.querySelectorAll('.mainBlock__wrapper__slide__content__title').forEach(function(elmnt){
+            elmnt.style.zIndex = '98';
+         });
+      }, 200);
    });
 });
 
-// JURASSIC PARK EASTER EGG
-let disable = true,
+// MODALS
+
+   // JURASSIC PARK EASTER EGG
+   let disable = true,
    alertModal = false;
 document.getElementById('park').volume = 0.2;
 
+function magicWord(){
+   document.querySelector('.parkModal').style.display = 'none';
+   document.getElementById('park').pause();
+   disable = false;
+}
 
-   // DISABLE RIGHT CLICK
+      // DISABLE RIGHT CLICK
 window.oncontextmenu = function(){
    if(disable == true){
       document.querySelector('.alertModal').style.transform = 'translate(-50%) scale(1)';
@@ -123,7 +189,7 @@ function hideAlert(){
  
 document.onkeydown = function (e) {
 
-   // DISABLE F12
+      // DISABLE F12
    if(e.keyCode == 123) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
@@ -135,7 +201,7 @@ document.onkeydown = function (e) {
       }
    }
 
-   // DISABLE CTRL + SHIFT + I
+      // DISABLE CTRL + SHIFT + I
    if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
@@ -147,7 +213,7 @@ document.onkeydown = function (e) {
       }
    }
 
-   // DISABLE CTRL + SHIFT + J
+      // DISABLE CTRL + SHIFT + J
    if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
@@ -159,7 +225,7 @@ document.onkeydown = function (e) {
       }
    }
 
-   // DISABLE CTRL + U
+      // DISABLE CTRL + U
    if(e.ctrlKey && e.keyCode == 85) {
       if(disable == true){
          document.querySelector('.parkModal').style.display = 'flex';
@@ -170,12 +236,4 @@ document.onkeydown = function (e) {
          return false;
       }
    }
-}
-
-// MODAL
-
-function magicWord(){
-   document.querySelector('.parkModal').style.display = 'none';
-   document.getElementById('park').pause();
-   disable = false;
 }
