@@ -1,5 +1,5 @@
 <?php
-    include 'actions/guestbook/sendComment.php';
+    // include 'actions/guestbook/sendComment.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
