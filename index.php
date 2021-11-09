@@ -63,23 +63,21 @@
 
                     <form class='mainBlock__wrapper__slide__content__form' method='POST'>
                         <div class="mainBlock__wrapper__slide__content__form__name">
-                            <input name='first_name' type="text" class="mainBlock__wrapper__slide__content__form__name__first form__input">
-                            <input name='last_name' type="text" class="mainBlock__wrapper__slide__content__form__name__last form__input">
+                            <input name='first_name' type="text" placeholder='First Name' class="mainBlock__wrapper__slide__content__form__name__first form__input">
+                            <input name='last_name' type="text" placeholder='Last Name' class="mainBlock__wrapper__slide__content__form__name__last form__input">
                         </div>
-                        <input name='mail' type="text" class="mainBlock__wrapper__slide__content__form__mail form__input">
-                        <textarea name='content' placeholder='' class='mainBlock__wrapper__slide__content__form__mailContent form__input'></textarea>
+                        <input name='mail' placeholder='Email Address' type="text" class="mainBlock__wrapper__slide__content__form__mail form__input">
+                        <textarea name='content' placeholder='Your Mail Content' class='mainBlock__wrapper__slide__content__form__mailContent form__input text__input'></textarea>
                     </form>
 
-                    <div class="mainBlock__wrapper__slide__content__guestbook">
-                        <form class='mainBlock__wrapper__slide__content__guestbook__form' method='POST'>
-                            <input name='name' type="text" class="mainBlock__wrapper__slide__content__guestbook__form__name form__input">
-                            <textarea name="comment" class='mainBlock__wrapper__slide__content__guestbook__form__comment form__input'></textarea>
-                            <button type='submit' name='validate'>Send</button>
-                        </form>
+                    <form class='mainBlock__wrapper__slide__content__guestbook' method='POST'>
+                        <input name='name' placeholder='Name' type="text" class="mainBlock__wrapper__slide__content__guestbook__name form__input">
+                        <textarea name="comment" placeholder='Your Comment' class='mainBlock__wrapper__slide__content__guestbook__comment form__input text__input'></textarea>
+                        <button class='form__input' type='submit' name='validate'>Send</button>
                         <div class="mainBlock__wrapper__slide__content__guestbook__commentSection">
 
                         </div>
-                    </div>
+                    </form>
                     
 
                     <h1 class='mainBlock__wrapper__slide__content__title'>contact me</h1>
