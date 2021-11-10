@@ -1,6 +1,8 @@
 <?php
+    // include 'actions/session.php';
     include 'actions/guestbook/sendComment.php';
     include 'actions/guestbook/showComments.php';
+    include 'actions/mail/sendEmail.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,13 +71,18 @@
                         </div>
                         <input name='mail' placeholder='Email Address' type="text" class="mainBlock__wrapper__slide__content__form__mail form__input">
                         <textarea name='content' placeholder='Your Mail Content' class='mainBlock__wrapper__slide__content__form__mailContent form__input text__input'></textarea>
-                        <button class='form__input btn' type='submit' name='validate'>Send</button>
+                        <button class='form__input btn' type='submit' name='sendMail'>Send</button>
+
+                        <?php if(isset($msg)){
+                            echo $msg;
+                            }
+                        ?>
                     </form>
 
                     <form class='mainBlock__wrapper__slide__content__guestbook' method='POST'>
                         <input name='name' placeholder='Name' type="text" class="mainBlock__wrapper__slide__content__guestbook__name form__input">
                         <textarea name="comment" placeholder='Your Comment' class='mainBlock__wrapper__slide__content__guestbook__comment form__input text__input'></textarea>
-                        <button class='form__input btn' type='submit' name='validate'>Send</button>
+                        <button class='form__input btn' type='submit' name='sendCom'>Send</button>
                         <hr>
                         <div class="mainBlock__wrapper__slide__content__guestbook__commentSection">
                             <?php 
