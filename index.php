@@ -76,6 +76,7 @@
                         <input name='name' placeholder='Name' type="text" class="mainBlock__wrapper__slide__content__guestbook__name form__input">
                         <textarea name="comment" placeholder='Your Comment' class='mainBlock__wrapper__slide__content__guestbook__comment form__input text__input'></textarea>
                         <button class='form__input btn' type='submit' name='validate'>Send</button>
+                        <hr>
                         <div class="mainBlock__wrapper__slide__content__guestbook__commentSection">
                             <?php 
                                 while($gb = $showGb->fetch()){
