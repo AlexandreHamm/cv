@@ -82,7 +82,6 @@
                                 while($gb = $showGb->fetch()){
                                     ?>
                                         <div class='mainBlock__wrapper__slide__content__guestbook__commentSection__commentWrapper'>
-                                        
                                             <p class='mainBlock__wrapper__slide__content__guestbook__commentSection__commentWrapper__comment'>
                                                 <?= $gb['comment'];?>
                                             </p>
