@@ -358,27 +358,27 @@ body{
                         &__commentWrapper{
                             width: 100%;
 
-                            margin-bottom: 3px;
+                            margin-bottom: 5px;
 
                             display: flex;
-                            // flex-direction: column;
-                            justify-content: space-between;
+                            flex-direction: column;
+                            // justify-content: space-between;
+
+                            background-color: rgba(88, 94, 104, 0.4);
+                            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 
                             &__name{
-                                width: 24%;
-                                max-height: 30px;
+                                // width: 100%;
+                                // max-height: 30px;
                                 padding: 5px;
 
-                                margin-right: 5px;
-                                margin-bottom: 5px;
+                                // margin-right: 5px;
+                                // margin-bottom: 5px;
 
                                 color: #fff;
                                 font-size: 18px;
                                 text-transform: capitalize;
-                                text-align: center;
-    
-                                background-color: rgba(88, 94, 104, 0.4);
-                                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+                                text-align: right;
                             }
                             
                             &__comment{
@@ -391,8 +391,8 @@ body{
                                 text-align: justify;
 
 
-                                background-color: rgba(88, 94, 104, 0.4);
-                                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+                                // background-color: rgba(88, 94, 104, 0.4);
+                                // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
                             }
                         }
                     }

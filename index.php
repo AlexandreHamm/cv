@@ -81,11 +81,11 @@
                                 while($gb = $showGb->fetch()){
                                     ?>
                                         <div class='mainBlock__wrapper__slide__content__guestbook__commentSection__commentWrapper'>
-                                            <h2 class='mainBlock__wrapper__slide__content__guestbook__commentSection__commentWrapper__name'><?= $gb['name'];?></h2>
                                         
                                             <p class='mainBlock__wrapper__slide__content__guestbook__commentSection__commentWrapper__comment'>
                                                 <?= $gb['comment'];?>
                                             </p>
+                                            <h2 class='mainBlock__wrapper__slide__content__guestbook__commentSection__commentWrapper__name'><?= $gb['name'];?></h2>
                                         </div>
                                     <?php
                                 }
