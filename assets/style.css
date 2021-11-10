@@ -303,22 +303,27 @@ body {
   background-color: rgba(88, 94, 104, 0.4);
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .mainBlock__wrapper__slide__content .form__input::-webkit-input-placeholder {
   color: #FFF;
+  opacity: .7;
 }
 
 .mainBlock__wrapper__slide__content .form__input:-ms-input-placeholder {
   color: #FFF;
+  opacity: .7;
 }
 
 .mainBlock__wrapper__slide__content .form__input::-ms-input-placeholder {
   color: #FFF;
+  opacity: .7;
 }
 
 .mainBlock__wrapper__slide__content .form__input::placeholder {
   color: #FFF;
+  opacity: .7;
 }
 
 .mainBlock__wrapper__slide__content .btn {
