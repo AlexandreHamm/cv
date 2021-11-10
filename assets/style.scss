@@ -248,8 +248,8 @@ body{
                 }
                 &__reveal{
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    top: 50%;
+                    left: 50%;
                     transform: translate(-50%, -50%);
 
                     width: 50px;
@@ -303,6 +303,10 @@ body{
                     }
                 }
 
+                & .btn{
+                    cursor: pointer;
+                }
+
                 & .text__input{
                     height: 30%;
                 }
@@ -344,6 +348,54 @@ body{
                     backdrop-filter: blur(6px) saturate(150%);
                     background-color: rgba(48, 53, 65, .4);
                     box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+
+                    &__commentSection{
+                        width: 100%;
+                        height: auto;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+
+                        &__commentWrapper{
+                            width: 100%;
+
+                            margin-bottom: 3px;
+
+                            display: flex;
+                            // flex-direction: column;
+                            justify-content: space-between;
+
+                            &__name{
+                                width: 24%;
+                                max-height: 30px;
+                                padding: 5px;
+
+                                margin-right: 5px;
+                                margin-bottom: 5px;
+
+                                color: #fff;
+                                font-size: 18px;
+                                text-transform: capitalize;
+                                text-align: center;
+    
+                                background-color: rgba(48, 53, 65, .4);
+                                box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+                            }
+                            
+                            &__comment{
+                                width: 100%;
+                                padding: 5px 10px;
+
+                                color: #fff;
+                                font-size: 17px;
+                                letter-spacing: .3px;
+                                text-align: justify;
+
+
+                                background-color: rgba(48, 53, 65, .4);
+                                box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+                            }
+                        }
+                    }
                 }
             }
         }

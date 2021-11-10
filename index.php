@@ -1,5 +1,6 @@
 <?php
-    // include 'actions/guestbook/sendComment.php';
+    include 'actions/guestbook/sendComment.php';
+    include 'actions/guestbook/showComments.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +60,7 @@
             </div>
             <div class="mainBlock__wrapper__slide">
                 <div class="mainBlock__wrapper__slide__content">
-                    <img class='mainBlock__wrapper__slide__content__img' src="./assets/src/img/office.webp" alt="">
+                    <img class='mainBlock__wrapper__slide__content__img' src="./assets/src/img/dark2.jpg" alt="">
 
                     <form class='mainBlock__wrapper__slide__content__form' method='POST'>
                         <div class="mainBlock__wrapper__slide__content__form__name">
@@ -68,14 +69,27 @@
                         </div>
                         <input name='mail' placeholder='Email Address' type="text" class="mainBlock__wrapper__slide__content__form__mail form__input">
                         <textarea name='content' placeholder='Your Mail Content' class='mainBlock__wrapper__slide__content__form__mailContent form__input text__input'></textarea>
+                        <button class='form__input btn' type='submit' name='validate'>Send</button>
                     </form>
 
                     <form class='mainBlock__wrapper__slide__content__guestbook' method='POST'>
                         <input name='name' placeholder='Name' type="text" class="mainBlock__wrapper__slide__content__guestbook__name form__input">
                         <textarea name="comment" placeholder='Your Comment' class='mainBlock__wrapper__slide__content__guestbook__comment form__input text__input'></textarea>
-                        <button class='form__input' type='submit' name='validate'>Send</button>
+                        <button class='form__input btn' type='submit' name='validate'>Send</button>
                         <div class="mainBlock__wrapper__slide__content__guestbook__commentSection">
-
+                            <?php 
+                                while($gb = $showGb->fetch()){
+                                    ?>
+                                        <div class='mainBlock__wrapper__slide__content__guestbook__commentSection__commentWrapper'>
+                                            <h2 class='mainBlock__wrapper__slide__content__guestbook__commentSection__commentWrapper__name'><?= $gb['name'];?></h2>
+                                        
+                                            <p class='mainBlock__wrapper__slide__content__guestbook__commentSection__commentWrapper__comment'>
+                                                <?= $gb['comment'];?>
+                                            </p>
+                                        </div>
+                                    <?php
+                                }
+                            ?>
                         </div>
                     </form>
                     
