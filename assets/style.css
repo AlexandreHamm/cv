@@ -413,7 +413,7 @@ body {
   font-size: 18px;
   text-transform: capitalize;
   text-align: center;
-  background-color: rgba(48, 53, 65, 0.4);
+  background-color: rgba(88, 94, 104, 0.4);
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
@@ -425,7 +425,7 @@ body {
   font-size: 17px;
   letter-spacing: .3px;
   text-align: justify;
-  background-color: rgba(48, 53, 65, 0.4);
+  background-color: rgba(88, 94, 104, 0.4);
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
