@@ -306,6 +306,7 @@ body {
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .mainBlock__wrapper__slide__content .form__input::-webkit-input-placeholder {
@@ -381,7 +382,7 @@ body {
 }
 
 .mainBlock__wrapper__slide__content__form .text__input {
-  height: 100%;
+  min-height: 80%;
 }
 
 .mainBlock__wrapper__slide__content__guestbook {

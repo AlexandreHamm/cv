@@ -302,6 +302,7 @@ body{
                     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 
                     font-family: Arial, Helvetica, sans-serif;
+                    font-size: 14px;
 
                     &::placeholder{
                         color: #FFF;
@@ -349,7 +350,7 @@ body{
                     }
 
                     & .text__input{
-                        height: 100%;
+                        min-height: 80%;
                     }
                 }
 
