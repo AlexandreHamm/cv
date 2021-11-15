@@ -7,7 +7,7 @@ if(isset($_POST['sendMail'])){
         $email_to = "a.hamm@codeur.online";
         $email_subject = "Contact - Portfolio";
 
-        $mail = "Nom: ".$_POST['last_name']."Prenom: ".$_POST['first_name']." Email: ".$_POST['mail']."\n\n".$_POST['content'];
+        $mail = "Nom: ".$_POST['last_name']." Prenom: ".$_POST['first_name']." Email: ".$_POST['mail']."\n\n".$_POST['content'];
         $retour = mail(
             'a.hamm@codeur.online', 
             'Un utilisateur vous a contacté via le formulaire de contact', 
